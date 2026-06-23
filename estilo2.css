@@ -70,28 +70,38 @@ footer { text-decoration-color : white;
 /* Estilo de la sección de contacto */
 /* Estilos para el diseño de la página */
 .contact {
-            display: flex;
-            flex-wrap: wrap; /* Permite que los elementos se ajusten en una fila cuando el espacio es insuficiente */
-            justify-content: space-between;
-            align-items: flex-start;
-        }
+    display: flex;
+    flex-wrap: wrap;        /* Permite adaptación responsive básica */
+    justify-content: center; /* JUNTOS Y CENTRADOS horizontalmente */
+    align-items: flex-start; /* Alineados arriba */
+    gap: 40px;               /* Distancia exacta entre info y formulario */
+    padding: 40px 20px;      /* Separación interna */
+    max-width: 1200px;       /* Límite de ancho en pantallas grandes */
+    margin: 0 auto;          /* Centra la sección completa en el navegador */
+}
 
-.contact-info, .contact-form {flex: 1;
-                              padding: 20px; 
-                              box-sizing: border-box;}
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;        /* Ancho mínimo para que no se compriman */
+    max-width: 500px;        /* Ancho máximo de cada bloque */
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
 .map {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-            max-width: 100%; /* Para asegurarse de que el mapa no exceda el tamaño del contenedor */
-            overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
-        }
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 100%; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; /* Centra el mapa abajo del contenido */
+}
 
 .map iframe {
-            width: 100%; /* Hace que el iframe ocupe el 100% del ancho del contenedor */
-            height: 100%; /* Hace que el iframe ocupe el 100% de la altura del contenedor */
-        }
-
+    width: 100%; 
+    max-width: 800px;        /* Limita el ancho del mapa para que se vea ordenado */
+    height: 450px; 
+}
         /* Estilos para la sección de contacto */
 .contact-info h1, .contact-form h1 {
             font-size: 24px;
